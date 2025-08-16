@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAKA Stevia</title>
+    <link rel="icon" href="assets/imgs/seenithulasi-stevia-new-web-logo.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/vs.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVB3ZcuHt0A93w35dYTsvhlPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+</head>
+  <body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+    <div class="container-fluid">
+      <img class="logo" src="assets/imgs/seenithulasi-stevia-new-web-logo.png" alt="Logo"/>
+      <h9 class="brand">MAKA Stevia</h9>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Product
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                <li><a class="dropdown-item" href="seenithulasi.html">Seenithulasi</a></li>
+                <li><a class="dropdown-item" href="innuputhulasi.html">Innuputhulasi</a></li>
+            </ul>
+        </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact us">Contact Us</a>
+          </li>
+                    
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <section style="position: relative; height: 100vh;">
+    <div class="row" style="position: absolute; top: 20%; width: 100%; transform: translateY(-50%);">
+
+      <!-- First Product -->
+      <div class="col-lg-4 col-md-4 col-12" style="position: absolute; left: 20%;">
+        <a href="p15.html" class="card-link">
+          <div class="card">
+            <img src="assets/imgs/Seenithulasi STS,STLT,STTD.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Seenithulasi STS,STLT,STTD Combo Pack</h5>
+              <h9 class="p-price">&#8377;200</h9><br>
+              <button class="buy-btn"  data-buy="buy.html">Buy Now</button>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <!-- Second Product -->
+      <div class="col-lg-4 col-md-4 col-12" style="position: absolute; right: 20%;">
+        <a href="p19.html" class="card-link">
+          <div class="card">
+            <img src="assets/imgs/seeni-thulasi-combo-pack.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Seenithulasi Combo Pack</h5>
+              <h9 class="p-price">&#8377;200</h9><br>
+              <button class="buy-btn"  data-buy="buy.html">Buy Now</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Ensure the DOM is fully loaded before running the script
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all "Buy Now" buttons
+        const buyButtons = document.querySelectorAll('.buy-btn');
+  
+        // Add a click event listener to each button
+        buyButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default behavior (if inside a form)
+                
+                // Redirect to the "Buy" page
+                const targetPage = button.getAttribute('data-buy');
+                if (targetPage) {
+                    window.location.href = targetPage;
+                } else {
+                    console.error('No target page specified for this button.');
+                }
+            });
+        });
+    });
+  </script>
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH0zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

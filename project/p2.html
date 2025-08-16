@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <link rel="icon" href="assets/imgs/seenithulasi-stevia-new-web-logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+  <div class="container-fluid">
+      <img class="logo" src="assets/imgs/seenithulasi-stevia-new-web-logo.png" alt="Logo"/>
+      <h9 class="brand">MAKa Stevia</h9>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> 
+      </button>
+      <div class="collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Product
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                    <li><a class="dropdown-item" href="seenithulasi.html">Seenithulasi</a></li>
+                    <li><a class="dropdown-item" href="innuputhulasi.html">Innuputhulasi</a></li>
+                </ul>
+            </li>
+            
+
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="contact us.html">Contact Us</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Login
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                    <li><a class="dropdown-item" href="admin.html">Admin Login</a></li>
+                    <li><a class="dropdown-item" href="login.html">Customer Login</a></li>
+                </ul>
+            </li>
+            
+          </ul>
+          <!-- Cart Icon -->
+          <a href="cart.html" class="nav-link">
+              <img src="assets/imgs/shopping-cart-304843_640.webp" alt="Cart" style="width: 24px; height: 24px;">
+          </a>
+      </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+<div class="w3-container">
+  <div class="container">
+    <!-- Product Image -->
+    <div class="product-image">
+      <img src="assets/imgs/IMG-20190413-WA0017.jpg" alt="Maka Stevia Lavender Tea">
+    </div>
+
+    <!-- Product Details -->
+    <div class="product-details">
+      <h1>MAKa Stevia</h1>
+      <h2>Seenithulasi Lavender Tea (50gm)</h2>
+      <h3>&#8377;200</h3>
+      <input type="number" value="1" />
+      <button class="buy-btn" id="addToCartBtn">Add to Cart</button>
+      <button class="buy-btn" data-buy="buy.html">Buy Now</button>
+      <h4>Key details from the Package:</h4>
+      <span>
+        Brand        :    Maka ST Seenithulasi<br>
+        Product      :    Lavender Tea<br>
+        Sweetener    :    Stevia<br>
+        Net weight   :    50g<br>
+        Tagline      :    New Rule By Nature
+      </span>
+      <h4>Description</h4>
+      <p>Seenithulasi Lavender Tea is a soothing herbal infusion crafted from premium lavender flowers. Known for its calming properties, this tea promotes relaxation and enhances sleep quality. Its delicate floral aroma and smooth flavor make it perfect for unwinding after a long day.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("addToCartBtn").addEventListener("click", function() {
+      // Navigate to the cart page
+      window.location.href = "cart.html"; // Replace with the actual URL of your cart page
+  });
+</script>
+
+<script>
+  // Ensure the DOM is fully loaded before running the script
+  document.addEventListener('DOMContentLoaded', () => {
+      // Select all "Buy Now" buttons
+      const buyButtons = document.querySelectorAll('.buy-btn');
+
+      // Add a click event listener to each button
+      buyButtons.forEach(button => {
+          button.addEventListener('click', (event) => {
+              event.preventDefault(); // Prevent default behavior (if inside a form)
+              
+              // Redirect to the "Buy" page
+              const targetPage = button.getAttribute('data-buy');
+              if (targetPage) {
+                  window.location.href = targetPage;
+              } else {
+                  console.error('No target page specified for this button.');
+              }
+          });
+      });
+  });
+</script>
+
+
+</body>
+</html>
